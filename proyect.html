@@ -1,1 +1,72 @@
 
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>¿Me amas?</title>
+    <style>
+        body {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            font-family: Arial, sans-serif;
+            background-color: #f0f8ff;
+        }
+
+        h1 {
+            color: #ff69b4;
+        }
+
+        .button-container {
+            margin-top: 20px;
+        }
+
+        .button {
+            padding: 10px 20px;
+            font-size: 18px;
+            margin: 5px;
+            cursor: pointer;
+            border: none;
+            border-radius: 5px;
+        }
+
+        #yes {
+            background-color: #ff69b4;
+            color: white;
+        }
+
+        #no {
+            background-color: #f08080;
+            color: white;
+            position: relative;
+        }
+    </style>
+</head>
+<body>
+    <h1>¿Me amas?</h1>
+    <img src="mejee.jpeg" width="300"/> <br>
+    <div class="button-container">
+        <button id="yes" class="button" onclick="showLove()">Sí</button>
+        <button id="no" class="button" onmouseover="moveButton()">No</button>
+    </div>
+
+    <script>
+        function showLove() {
+            // Aquí puedes poner el enlace de destino
+            window.location.href = "file:///Users/franciscoespinoza/Documents/html/jeje/jeje.html"; // Cambia esto por la URL deseada
+        }
+
+        function moveButton() {
+            const noButton = document.getElementById("no");
+            const x = Math.random() * (window.innerWidth - noButton.clientWidth);
+            const y = Math.random() * (window.innerHeight - noButton.clientHeight);
+            noButton.style.position = "absolute";
+            noButton.style.left = x + "px";
+            noButton.style.top = y + "px";
+        }
+    </script>
+</body>
+</html>
